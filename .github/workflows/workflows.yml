@@ -14,9 +14,10 @@ jobs:
 
       - name: Set Version
         run: |
-          echo ::set-env name=RELEASE_VERSION::${GITHUB_REF:10}
+          echo "RELEASE_VERSION=${GITHUB_REF:10}" >> $GITHUB_ENV
       - name: Set Image Name
-        run: echo ::set-env name=IMAGE_NAME::docker.pkg.github.com/${{ github.repository }}/${{ github.event.repository.name }}:${{ env.RELEASE_VERSION }}
+        run: |
+          echo "IMAGE_NAME=docker.pkg.github.com/${{ github.repository }}/${{ github.event.repository.name }}:${{ env.RELEASE_VERSION }}" >> $GITHUB_ENV
 
       - name: Build The Docker Image
         run: |
