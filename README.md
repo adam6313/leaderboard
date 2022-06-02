@@ -39,9 +39,7 @@ This is a semple leaderboard project.
   - logger
 
 ## Getting Started
-:::info
 :bulb: Please check that the computer environment has docker service!
-:::
 Run the following command.
 
 
