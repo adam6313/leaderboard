@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   api:
-    image: docker.pkg.github.com/adam6313/leaderboard/leaderboard:v0.0.3
+    image: docker.pkg.github.com/adam6313/leaderboard/leaderboard:v1.1.0
     container_name: api
     depends_on:
       - redis 
