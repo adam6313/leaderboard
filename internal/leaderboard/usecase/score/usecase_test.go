@@ -195,7 +195,7 @@ func (t *TestSuite) Test_AddIgnoreDuplicate() {
 		t.Run(test.name, func() {
 			test.fn(test.args)
 
-			got := t.usecase.Add(test.args.ctx, test.args.command)
+			got := t.usecase.AddIgnoreDuplicate(test.args.ctx, test.args.command)
 			t.Equal(test.wantError, got != nil)
 
 		})
