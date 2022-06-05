@@ -66,5 +66,8 @@ curl --location --request GET '127.0.0.1:8080'
 
 | URI               |   Method |   Desc   |
 | --------          | -------- | -------- |
+| /     | GET     | get service version     |
 | /api/v1/score     | POST     | record client score     |
+| /api/v1/dup/score     | POST     | Allow duplicate clientID to appear in leaderboard    |
 | /api/v1/leaderboard     | GET     | get latest top 10 highest score clients     |
+
